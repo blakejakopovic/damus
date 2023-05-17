@@ -141,7 +141,7 @@ struct ImageCarousel: View {
             }
         }
         .fullScreenCover(isPresented: $open_sheet) {
-            ImageView(urls: urls, disable_animation: state.settings.disable_animation)
+            ImageView(urls: urls, state: state, disable_animation: state.settings.disable_animation)
         }
         .frame(height: self.height)
         .onTapGesture {
